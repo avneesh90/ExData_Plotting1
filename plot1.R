@@ -10,7 +10,7 @@ for(i in 3:9){
   pow2days[,i]=as.numeric(as.character(pow2days[,i]))
 }
 ## plot the graph using hist()
-png(file="plot1.png")
+png(file="plot1.png",width=480,height=480)
 hist(pow2days[,"Global_active_power"], main="", xlab="",col="red")
 title(main = "Global Active Power", xlab="Global Active Power (kilowatts)")
 dev.off()

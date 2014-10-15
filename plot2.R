@@ -10,7 +10,7 @@ for(i in 3:9){
   pow2days[,i]=as.numeric(as.character(pow2days[,i]))
 }
 ## plot the graph using plot()
-png(file="plot2.png")
+png(file="plot2.png",width=480,height=480)
 plot(pow2days[,"Time"],pow2days[,"Global_active_power"], type="l", main="", xlab="", ylab="")
 title(ylab="Global Active Power (kilowatts)")
 dev.off()

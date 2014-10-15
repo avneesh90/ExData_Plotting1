@@ -10,9 +10,10 @@ for(i in 3:9){
   pow2days[,i]=as.numeric(as.character(pow2days[,i]))
 }
 ## plot the graph using plot()
-png(file="plot3.png")
+png(file="plot3.png",width=480,height=480)
 plot(pow2days[,"Time"],pow2days[,"Sub_metering_1"], type="l", main="", xlab="", ylab="",col="black")
 lines(pow2days[,"Time"],pow2days[,"Sub_metering_2"],col="red")
 lines(pow2days[,"Time"],pow2days[,"Sub_metering_3"],col="blue")
 title(ylab="Energy sub metering")
+legend("topright", legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),pch="-", col=c("Black","Red","Blue"))
 dev.off()
